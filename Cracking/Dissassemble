@@ -1,0 +1,9 @@
+Disassemble EXE file on Windows :
+
+   Use OllyDbg : http://www.ollydbg.de/
+   
+   
+   
+Disassemble BIN file on Linux : 
+
+   objdump -D ./myfile.bin
