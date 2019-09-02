@@ -2,12 +2,16 @@ Disassemble EXE file on Windows :
 
    Use OllyDbg : http://www.ollydbg.de/
    
-   
-   
 Disassemble BIN file on Linux : 
 
    objdump
       objdump -D ./myfile.bin
+      
+      objdump can print all code, not only the binary source code : headers...
+      
+      .text section contains all the user source code compiled.
+      .rodata (read only data section), strings can be found in there
+      
    
    Radare2
       https://thanat0s.trollprod.org/2014/05/radare2-tuto-basic-premiere-approche/
