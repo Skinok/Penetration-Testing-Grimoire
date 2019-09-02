@@ -1,0 +1,24 @@
+Radare2
+
+      https://thanat0s.trollprod.org/2014/05/radare2-tuto-basic-premiere-approche/
+
+      L’addresse d’une string, d’une fonction, d’une référence est un “Flag”. 
+      Et vu que cela fait beaucoup d’objets, il sont rangés par “FlagSpaces”.  
+      «fs» permet d’afficher ou de sélectionner le Flagspace dans lequel on travaille et «f» affiche les flags.
+
+      On peut afficher les strings avec «ps» (Print String), et plus précisément «psz» pour une stringZ (Zero terminated).
+      Si le code n’a pas été analysé, il n’y a pas de flagspace “fonctions”.
+      
+      [0x004004c0]> arf sym.imp.strcmp  // Donne moi les références. 
+      Finding references of flags matching 'sym.imp.strcmp'...
+      ar 0x004004a0 0x0040060f
+      
+      [0x00400bc0]> pdf@0x0040060F
+      
+      [0x004004c0]> !rax2 -s 0x2173736170  | rev
+
+      On peut utiliser «rax2» un autre tools de la suite RadaRE2 qui convertit tout en tout. 
+      Et il est aussi possible de l’apeller directement depuis notre RadaRE2 avec un «!».
+      
+      
+      Retenons, aa, pdf, psz, f, fs et arf. Cela sera déja très bien.
