@@ -33,7 +33,8 @@ Radare2
             The current graph is shown. The blue box indicate the current function
             
             > p : cycle across different representations
-            > 
+            
+            > V! : fancy debugger mode
 
       Debug Mode : 
       
@@ -49,4 +50,5 @@ Radare2
                :> dr : display registers content
                >dr rip=0x1515111321 : set the "rip" (or current pointer) to the adress we want, in order to force the jump at a particular loccation
                
+           > ood
               
