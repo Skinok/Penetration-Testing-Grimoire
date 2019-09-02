@@ -1,0 +1,16 @@
+Assembly Tips :
+
+
+    EAX register is the first 32 bits of the RAX register
+    
+    So : 
+
+      test eax, eax    ; equals : cmp eax, 0
+      jne 0x4155103    ; JNE will jump if the result of the previous test is not equal
+
+      "test eax, eax est plus rapide que cmp eax, 0 car cmp effectue une soustraction (eax - 0) puis positionne le Zero Flag à 1 si le résultat vaut zéro (donc un je effectue le saut si eax vaut zéro). 
+      Alors que test effectue un ET logique: x ET x renvoie 0 ssi x vaut 0. test met aussi le Zéro Flag à 1 si le résultat vaut zéro, donc l'effet est similaire."
+        
+        
+        
+        
