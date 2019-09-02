@@ -1,0 +1,24 @@
+GDB use
+
+    Main commands :
+
+        Set Breakpoint : 
+            b *0x0041256   (set a breakpoint at adress 0x0041256)
+            b *main        (set a breakpoint before the main function)
+
+        Once breakpoint has triggered :
+            si : steps into function calls (Visual : F11)
+            ni : just continue the debugging step by step (Visual : F10)
+            c : (continue) will continue the execution until the next breakpoint (Visual : F5)
+
+        Registers : 
+
+            Display registers : 
+                info registers : display main registers content
+                info all-registers : display all registers content
+
+                print $rax : display the content of the rax register
+                p (char*)$rax  : display in stirng format if possible
+
+            Modify registers : 
+                set $eax=0
