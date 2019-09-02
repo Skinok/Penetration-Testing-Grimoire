@@ -5,6 +5,8 @@ Radare2
             Helpfull links : 
                   https://thanat0s.trollprod.org/2014/05/radare2-tuto-basic-premiere-approche/
                   https://www.youtube.com/watch?v=3NTXFUxcKPc
+                  
+            Book : https://radare.gitbooks.io/radare2book
 
             L’addresse d’une string, d’une fonction, d’une référence est un “Flag”. 
             Et vu que cela fait beaucoup d’objets, il sont rangés par “FlagSpaces”.  
