@@ -46,8 +46,7 @@ Radare2
                > VV (optional : visual mode in ddebug) "rip" is a register of the current instruction pointer, it's the green arrow of visual 
                :> dc : debug continue 
                :> s : step by step instruction into functions (F11) / S : step by step (F10)
+               :> dr : display registers content
+               >dr rip=0x1515111321 : set the "rip" (or current pointer) to the adress we want, in order to force the jump at a particular loccation
                
-               
-      
-            
-                  db 
+              
