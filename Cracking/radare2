@@ -37,6 +37,10 @@ Radare2
             Num Paddr      Vaddr      Len Size Section  Type  String
             000 0x00002008 0x00002008  50  51 (.rodata) ascii You almost got me :D\nHere is small price for you: 
 
+      2.1) Renaming Assembly variable : 
+      
+       > afn blabla : rename the current function to blabla
+       > afvn local_8h toto : rename the local_8H var to toto
 
       3) Graphical Mode : 
             > VV
