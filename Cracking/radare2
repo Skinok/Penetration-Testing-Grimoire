@@ -43,12 +43,17 @@ Radare2
        > afvn local_8h toto : rename the local_8H var to toto
 
       3) Graphical Mode : 
-            > VV
-            The current graph is shown. The blue box indicate the current function
+            > VV : current graph is shown. The blue box indicate the current function
+            > V! : fancy debugger mode
             
             > p : cycle across different representations
             
-            > V! : fancy debugger mode
+                hjkl - scroll canvas
+                HJKL - move node
+                tab/TAB - select next/previous node
+                t/f - follow true/false edges
+                . - center the graph
+                p - press repeatedly to change graph view
 
       4) Debug Mode : 
       
