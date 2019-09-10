@@ -1,6 +1,6 @@
 Radare2
 
-      General presentation
+      1) General presentation
 
             Helpfull links : 
                   https://thanat0s.trollprod.org/2014/05/radare2-tuto-basic-premiere-approche/
@@ -9,13 +9,60 @@ Radare2
                   
             Book : https://radare.gitbooks.io/radare2book
             
-            1) Analyze the file description : 
+      2) Analyze the file description : 
             
             > radare2 myFile
-             
-             https://blog.techorganic.com/2016/03/08/radare-2-in-0x1e-minutes/
-             
-             
+            
+            [0x00001060]> ie
+                  [Entrypoints]
+                  vaddr=0x00001060 paddr=0x00001060 haddr=0x00000018 hvaddr=0x00000018 type=program
+
+                  1 entrypoints
+                  
+            [0x00001060]> iM
+                  [Main]
+                  vaddr=0x00001258 paddr=0x00001258
+
+            [0x00001060]> is
+                  [Symbols]
+                  Num Paddr      Vaddr      Bind     Type Size Name
+                  001 0x00000000 0x00000000   WEAK NOTYPE   16 imp._ITM_deregisterTMCloneTable
+                  002 0x00001030 0x00001030 GLOBAL   FUNC   16 imp.puts
+                  003 0x00001040 0x00001040 GLOBAL   FUNC   16 imp.printf
+                  004 0x00000000 0x00000000 GLOBAL   FUNC   16 imp.__libc_start_main
+                  ...
+
+            [0x00001060]> iz
+            [Strings]
+            Num Paddr      Vaddr      Len Size Section  Type  String
+            000 0x00002008 0x00002008  50  51 (.rodata) ascii You almost got me :D\nHere is small price for you: 
+
+
+      3) Graphical Mode : 
+            > VV
+            The current graph is shown. The blue box indicate the current function
+            
+            > p : cycle across different representations
+            
+            > V! : fancy debugger mode
+
+      4) Debug Mode : 
+      
+            Launch the program in debug mode : 
+               > r2 -d myprog.bin
+               > aaa
+               > s sym.main
+               > pdf
+               > db 0x00415151 : place a breakpoint at the given adress
+               > VV (optional : visual mode in ddebug) "rip" is a register of the current instruction pointer, it's the green arrow of visual 
+               :> dc : debug continue 
+               :> s : step by step instruction into functions (F11) / S : step by step (F10)
+               :> dr : display registers content
+               >dr rip=0x1515111321 : set the "rip" (or current pointer) to the adress we want, in order to force the jump at a particular loccation
+               
+           > ood
+
+Notes a trier :
 
             L’addresse d’une string, d’une fonction, d’une référence est un “Flag”. 
             Et vu que cela fait beaucoup d’objets, il sont rangés par “FlagSpaces”.  
@@ -39,29 +86,5 @@ Radare2
             On peut utiliser «rax2» un autre tools de la suite RadaRE2 qui convertit tout en tout. 
             Et il est aussi possible de l’apeller directement depuis notre RadaRE2 avec un «!».
 
-            Retenons, aa, pdf, psz, f, fs et arf. Cela sera déja très bien.
-
-      Graphical Mode : 
-            > VV
-            The current graph is shown. The blue box indicate the current function
-            
-            > p : cycle across different representations
-            
-            > V! : fancy debugger mode
-
-      Debug Mode : 
-      
-            Launch the program in debug mode : 
-               > r2 -d myprog.bin
-               > aaa
-               > s sym.main
-               > pdf
-               > db 0x00415151 : place a breakpoint at the given adress
-               > VV (optional : visual mode in ddebug) "rip" is a register of the current instruction pointer, it's the green arrow of visual 
-               :> dc : debug continue 
-               :> s : step by step instruction into functions (F11) / S : step by step (F10)
-               :> dr : display registers content
-               >dr rip=0x1515111321 : set the "rip" (or current pointer) to the adress we want, in order to force the jump at a particular loccation
-               
-           > ood
+Retenons, aa, pdf, psz, f, fs et arf. Cela sera déja très bien.
               
