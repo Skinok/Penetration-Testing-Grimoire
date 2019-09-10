@@ -71,6 +71,17 @@ Radare2
                
            > ood
 
+      5 ) Modify the binary 
+          Used the 'w' command : 
+          
+          0x02145210 jne 0x12154848
+          >oo+ : re-open in re-write mode
+          >s 0x02145210
+          >wx 9090
+          >oo : re-open in read mode
+          
+          
+
 Notes a trier :
 
             L’addresse d’une string, d’une fonction, d’une référence est un “Flag”. 
