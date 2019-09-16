@@ -41,6 +41,8 @@ Radare2
       
        > afn blabla : rename the current function to blabla
        > afvn local_8h toto : rename the local_8H var to toto
+       > afta : The type inference for local variables and arguments is well integrated
+          It allows variable to be typed in ASM code instead of all ints.
 
       3) Graphical Mode : 
             > VV : current graph is shown. The blue box indicate the current function
