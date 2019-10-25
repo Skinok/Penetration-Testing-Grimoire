@@ -9,6 +9,8 @@ Radare2
                   
             Book : https://radare.gitbooks.io/radare2book
             
+            COMMANDS : https://radare.gitbooks.io/radare2book/refcard/intro.html
+            
       2) Analyze the file description : 
             
             > radare2 myFile
