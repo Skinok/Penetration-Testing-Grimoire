@@ -11,7 +11,7 @@ Radare2
             
       2) Analyze the file description : 
             
-            > *radare2 myFile*
+            > radare2 myFile
             
             [0x00001060]> ie
                   [Entrypoints]
