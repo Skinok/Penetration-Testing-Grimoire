@@ -37,7 +37,34 @@ Radare2
             Num Paddr      Vaddr      Len Size Section  Type  String
             000 0x00002008 0x00002008  50  51 (.rodata) ascii You almost got me :D\nHere is small price for you: 
 
-      2.1) Renaming Assembly variable : 
+      2.1) Flags : Flags are like bookmarks, but they carry some extra information like size, tags or associated flagspace. 
+      [0x7f23dc6df090]> fs
+            0    3 * strings
+            1    4 * symbols
+            2   28 * sections
+            3   10 * segments
+            4   11 * relocs
+            5   20 * imports
+            6   19 * regs
+            7    3 * functions
+            
+      [0x7f23dc6df090]> f
+            0x00400a70 15 str.SuperSeKretKey
+            0x00400a82 5 str.20s
+            0x00400a87 6 str.s
+            0x0040085d 283 main
+            0x004006a0 41 entry0
+            ...
+            
+      [0x7f23dc6df090]> fs functions
+      [0x7f23dc6df090]> f
+            0x0040078d 208 sub.time_40078d
+            0x00400978 96 sub.putchar_400978
+            0x004006d0 41 fcn.004006d0
+
+      
+
+      2.2) Renaming Assembly variable : 
       
        > afn blabla : rename the current function to blabla
        > afvn local_8h toto : rename the local_8H var to toto
