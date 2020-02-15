@@ -100,6 +100,21 @@ Radare2
                :> dr : display registers content
                >dr rip=0x1515111321 : set the "rip" (or current pointer) to the adress we want, in order to force the jump at a particular loccation
                
+               Show Register FLAGS :  
+                  doc : https://en.wikipedia.org/wiki/FLAGS_register 
+                        http://faydoc.tripod.com/cpu/ja.htm
+                        
+                  :> dr 1
+                  cf = 0x00000000
+                  pf = 0x00000000
+                  af = 0x00000000
+                  zf = 0x00000000
+                  sf = 0x00000000
+                  tf = 0x00000000
+                  if = 0x00000000
+                  df = 0x00000000
+                  of = 0x00000000
+               
            > ood
 
       5 ) Modify the binary 
