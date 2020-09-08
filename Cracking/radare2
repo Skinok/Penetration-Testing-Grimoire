@@ -126,7 +126,22 @@ Radare2
           >wx 9090
           >oo : re-open in read mode
           
+          6 ) Tips 
           
+          Debugging with an STDIN entry : 
+          source : $ ood?
+          '''
+            [0x7fd514d17e66]> dor stdin="AAAA";ood
+            PTRACE_CONT: No such process
+            child received signal 9
+            Process with PID 26370 started...
+            = attach 26370 26370
+            File dbg:///challenge/app-systeme/ch35/ch35  reopened in read-write mode
+            26370
+            [0x7ffa516a6090]> dc
+            Hello AAAA
+          '''
+
 
 Notes a trier :
 
